@@ -1,0 +1,55 @@
+$white: #fff;
+$gray: #ccc;
+$pink: #ef54aa;
+
+.o-Flex {
+  display: flex;
+}
+
+.o-Flex--space-between {
+  justify-content: space-between;
+}
+
+.o-Flex--center-column {
+  align-items: center;
+}
+
+.c-Button {
+  appearance: none;
+  background-color: $white;
+  border: 3px solid $pink;
+  color: $pink;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  
+  &:hover,
+  &:focus {
+    background-color: $pink;
+    color: $white;
+  }
+}
+
+// Table styles
+.c-Table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+}
+
+.c-Table th {
+  background-color: $pink;
+  color: $white;
+  padding: 1rem;
+}
+
+.c-Table tr:nth-child(even) {
+  background-color: $gray;
+}
+
+.c-Table td {
+  padding: 1rem;
+}

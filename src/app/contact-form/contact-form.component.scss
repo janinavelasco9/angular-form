@@ -1,0 +1,106 @@
+$gray: #ccc;
+$white: #fff;
+$black: #333;
+$pink: #ef54aa;
+
+// Breakpoints
+$small-breakpoint: 550px;
+
+// Form styles
+.c-InputContainer {
+  margin-bottom: 1rem;
+}
+
+.c-Label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.c-Input {
+  border: 3px solid $gray;
+  border-radius: 2px;
+  font-size: 1rem;
+  padding: 0.75rem 0.5rem;
+  width: 100%;
+  
+  &:focus,
+  &:active {
+    outline: 0;
+    border-color: $pink;
+  }
+}
+
+.c-Button {
+  appearance: none;
+  background-color: $white;
+  border: 3px solid $pink;
+  color: $pink;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.c-Button:disabled {
+  border: 3px solid $gray;
+  background: $gray;
+  color: $white;
+}
+
+.c-Link {
+  color: $black;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Flex styles
+.o-Flex {
+  display: flex;
+}
+
+.o-Flex__item {
+  flex: 0 0 auto;
+}
+
+.o-Flex--center-column {
+  align-items: center;
+}
+
+.o-Flex--small .o-Flex__item {
+  margin-right: 1rem;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.o-Flex--split\@s {
+  flex-direction: column;
+  
+  @media all and (min-width: $small-breakpoint) {
+    flex-direction: row;
+  }
+}
+
+.o-Flex--split\@s .o-Flex__item {
+  flex: 1;
+  
+  @media all and (min-width: $small-breakpoint) {
+    margin-right: 1.5rem;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// Utility styles
+.u-Mbm {
+  margin-bottom: 1rem;
+}

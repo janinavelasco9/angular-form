@@ -1,0 +1,67 @@
+
+<h1>
+  Create New Contact
+</h1>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="o-Flex o-Flex--split@s u-Mbm">
+    <div class="o-Flex__item">
+      <div class="c-InputContainer">
+        <label class="c-Label" for="firstName">
+          First Name
+        </label>
+        <input class="c-Input" type="text" formControlName="firstName" required>
+      </div>
+      
+      <div class="c-InputContainer">
+        <label class="c-Label" for="lastName">
+          Last Name
+        </label>
+        <input class="c-Input" type="text" formControlName="lastName" required>
+      </div>
+      
+      <div class="c-InputContainer">
+        <label class="c-Label" for="company">
+          Company
+        </label>
+        <input class="c-Input" type="text" formControlName="company" required>
+      </div>
+    </div>    
+
+    <div class="o-Flex__item">
+      <div class="c-InputContainer">
+        <label class="c-Label" for="email">
+          Email
+        </label>
+        <input class="c-Input" type="text" formControlName="email" required>
+      </div>
+      
+      <div class="c-InputContainer">
+        <label class="c-Label" for="phone">
+          Phone  
+        </label>
+        <input class="c-Input" type="text" formControlName="phone" required>
+      </div>
+      
+      <div class="c-InputContainer">
+        <label class="c-Label" for="address">
+          Address
+        </label>
+        <input class="c-Input" type="text" formControlName="address" required>
+      </div>
+    </div>
+  </div>
+  
+  <div class="o-Flex o-Flex--center-column o-Flex--small">
+    <button class="o-Flex__item c-Button" type="submit" [disabled]="!contactForm.valid">
+      Save
+    </button>
+    <a class="o-Flex__item c-Link" routerLink="/">Cancel</a>
+  </div>
+</form>
+
+{{ firstName }}
+{{ lastName }}
+{{ company }}
+{{ email }}
+{{ phone }}
+{{ address }}
