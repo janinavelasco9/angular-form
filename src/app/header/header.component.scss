@@ -1,0 +1,14 @@
+$pink: #ef54aa;
+
+.c-Header {
+  display: flex;
+  background-color: $pink;
+  padding: 0.5rem 2rem;
+}
+
+.c-Icon {
+  height: 3rem;
+  fill: none;
+  stroke: white;
+  width: 3rem;
+}

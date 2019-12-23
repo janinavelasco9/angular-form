@@ -25,14 +25,16 @@
         </label>
         <input class="c-Input" type="text" formControlName="company" required>
       </div>
-    </div>    
+    </div>
 
     <div class="o-Flex__item">
       <div class="c-InputContainer">
         <label class="c-Label" for="email">
           Email
         </label>
-        <input class="c-Input" type="text" formControlName="email" required>
+        <input class="c-Input" type="text" formControlName="email" name="email">
+        <p *ngIf="email.errors?.required && email.touched">Please enter an email address.</p>
+        <p *ngIf="email.errors?.email && email.touched">Please enter a correct email address.</p>
       </div>
       
       <div class="c-InputContainer">
@@ -52,16 +54,33 @@
   </div>
   
   <div class="o-Flex o-Flex--center-column o-Flex--small">
-    <button class="o-Flex__item c-Button" type="submit" [disabled]="!contactForm.valid">
+    <button class="o-Flex__item c-Button" type="submit">
       Save
     </button>
     <a class="o-Flex__item c-Link" routerLink="/">Cancel</a>
   </div>
 </form>
 
-{{ firstName }}
-{{ lastName }}
-{{ company }}
-{{ email }}
-{{ phone }}
-{{ address }}
+<div class="c-ContactDetail" *ngIf="hasSubmitted" >
+  <h2>
+    Contact Detail
+  </h2>
+  <p>
+    {{ firstNameDetail }} {{ lastNameDetail }}
+  </p>
+
+  <p>
+    {{ companyDetail }}
+  </p>
+  <p>
+    <a class="c-Link--special" href="mailto:{{ emailDetail }}">
+      {{ emailDetail }}
+    </a>
+  </p>
+  <p>
+    {{ phoneDetail }}
+  </p>
+  <p>
+    {{ addressDetail }}
+  </p>
+</div>

@@ -1,4 +1,4 @@
-<div class="o-Flex o-Flex--space-between o-Flex--center-column">
+<div class="c-PageNavigation">
   <h1>
     Contact List
   </h1>
@@ -7,39 +7,39 @@
   </a>
 </div>
 
-<table class="c-Table">
-  <thead>
-    <tr>
-      <th>
-        First Name
-      </th>
-      <th>
-        Last Name
-      </th>
-      <th>
-        Company
-      </th>
-      <th>
-        Email
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of contactInfo" >
-      <td>
-        {{ item.firstName }}
-      </td>
-      <td>
-        {{ item.lastName }}
-      </td>
-      <td>
-        {{ item.company }}
-      </td>
-      <td>
-        {{ item.email }}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
+<div class="c-TableContainer">
+  <table class="c-Table">
+    <thead>
+      <tr>
+        <th>
+          First Name
+        </th>
+        <th>
+          Last Name
+        </th>
+        <th>
+          Company
+        </th>
+        <th>
+          Email
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of contactInfo" >
+        <td>
+          {{ item.firstName }}
+        </td>
+        <td>
+          {{ item.lastName }}
+        </td>
+        <td>
+          {{ item.company }}
+        </td>
+        <td>
+          {{ item.email }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

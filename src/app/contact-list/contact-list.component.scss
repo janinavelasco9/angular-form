@@ -1,17 +1,11 @@
 $white: #fff;
-$gray: #ccc;
+$gray: #efefef;
 $pink: #ef54aa;
 
-.o-Flex {
-  display: flex;
-}
-
-.o-Flex--space-between {
-  justify-content: space-between;
-}
-
-.o-Flex--center-column {
+.c-PageNavigation {
   align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .c-Button {
@@ -34,6 +28,12 @@ $pink: #ef54aa;
 }
 
 // Table styles
+.c-TableContainer {
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+}
+
 .c-Table {
   border-collapse: collapse;
   text-align: left;

@@ -4,8 +4,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 
 const routes: Routes = [
-  { path: '', component: ContactListComponent },
-  { path: 'new-contact', component: ContactFormComponent }
+  { path: 'new-contact', component: ContactFormComponent },
+  { path: '', component: ContactListComponent, pathMatch: 'full' }
 ];
 
 @NgModule({

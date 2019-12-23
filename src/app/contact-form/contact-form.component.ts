@@ -9,18 +9,19 @@ import { Validators } from '@angular/forms';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent implements OnInit {
-  firstName;
-  lastName;
-  company;
-  email;
-  phone;
-  address;
+  firstNameDetail;
+  lastNameDetail;
+  companyDetail;
+  emailDetail;
+  phoneDetail;
+  addressDetail;
+  hasSubmitted = false;
   
   contactForm = this.fb.group({
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
     company: ['', Validators.required],
-    email: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
     phone: ['', Validators.required],
     address: ['', Validators.required]
   })
@@ -30,12 +31,17 @@ export class ContactFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  get email() {
+    return this.contactForm.get('email');
+  }
+
   onSubmit() {
-    this.firstName = this.contactForm.value.firstName;
-    this.lastName = this.contactForm.value.lastName;
-    this.company = this.contactForm.value.company;
-    this.email = this.contactForm.value.email;
-    this.phone = this.contactForm.value.phone;
-    this.address = this.contactForm.value.address;
+    this.firstNameDetail = this.contactForm.value.firstName;
+    this.lastNameDetail = this.contactForm.value.lastName;
+    this.companyDetail = this.contactForm.value.company;
+    this.emailDetail = this.contactForm.value.email;
+    this.phoneDetail = this.contactForm.value.phone;
+    this.addressDetail = this.contactForm.value.address;
+    this.hasSubmitted = !this.hasSubmitted;
   }
 }
